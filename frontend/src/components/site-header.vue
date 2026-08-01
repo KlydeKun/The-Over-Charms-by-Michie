@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-foreground/5"
+    class="sticky top-0 z-40 bg-background/50 backdrop-blur-sm border-b border-foreground/5 transform:[translateZ(0)]"
   >
     <div
       class="max-w-6xl mx-auto px-5 sm:px-6 py-4 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4"
@@ -15,7 +15,7 @@
         <p
           class="font-display text-normal sm:text-lg font-bold tracking-tight truncate"
         >
-          The Over Charms
+          The Oven Charms
           <p class="text-xs text-muted-foreground">by Michie</p>
         </p>
       </router-link>

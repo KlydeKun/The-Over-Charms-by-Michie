@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <p>Home Page</p>
-  </div>
+  <HeroComponent />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeroComponent from "@/components/home/HeroComponent.vue";
+</script>
