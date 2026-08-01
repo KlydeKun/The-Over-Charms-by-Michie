@@ -56,6 +56,6 @@
 </template>
 
 <script setup lang="ts">
-import ribbon from "@/assets/images/ribbon_no_bg.png";
+import ribbon from "@/assets/images/ribbon_no_bg_1.png";
 import heroImage from "@/assets/images/hero_image.jpg";
 </script>
