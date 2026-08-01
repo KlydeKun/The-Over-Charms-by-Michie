@@ -1,0 +1,33 @@
+<template>
+  <nav
+    class="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-foreground/5"
+  >
+    <div
+      class="max-w-6xl mx-auto px-5 sm:px-6 py-4 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4"
+    >
+      <router-link to="/" class="flex items-center gap-2 min-w-0">
+        <span
+          class="size-10 shrink-0 rounded-full grid place-items-center text-primary-foreground font-display font-bold"
+          >
+          <img :src="logo" alt="logo" class="rounded-full">
+          </span
+        >
+        <p
+          class="font-display text-normal sm:text-lg font-bold tracking-tight truncate"
+        >
+          The Over Charms
+          <p class="text-xs text-muted-foreground">by Michie</p>
+        </p>
+      </router-link>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <router-link to="/menu" class="hidden sm:inline-flex text-sm font-medium px-4 py-2 rounded-full border border-foreground/10 hover:bg-foreground/5 transition-colors">Menu</router-link>
+        <router-link to="/cart" class="relative text-sm font-medium px-4 py-2 rounded-full border border-foreground/10 hover:bg-foreground/5 transition-colors">Cart</router-link>
+        <router-link to="/menu" class="hidden sm:inline-flex text-sm font-medium bg-primary text-primary-foreground px-5 py-2 rounded-full hover:brightness-110 transition-all">Order Now</router-link>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<script setup lang="ts">
+import logo from '@/assets/images/logo.jpg'
+</script>
