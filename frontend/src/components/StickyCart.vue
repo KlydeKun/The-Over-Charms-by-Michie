@@ -35,6 +35,8 @@ const isHidden = computed(() => {
   if (totalItems.value === 0) return true;
 
   const hiddenPaths = ["/cart", "/checkout", "/order"];
-  return hiddenPaths.some((path) => route.path.startsWith(path));
+  return hiddenPaths.some((path) => {
+    return route.path === path || route.path.startsWith(`${path}/`);
+  });
 });
 </script>
