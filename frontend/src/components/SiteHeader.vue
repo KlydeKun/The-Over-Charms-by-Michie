@@ -31,12 +31,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
 import logo from '@/assets/images/logo.jpg'
 import { useCart } from '@/composables/useCart';
 
-const { items } = useCart();
-const totalItems = computed(() =>
-  items.reduce((total, item) => total + item.quantity, 0),
-);
+const { totalItems } = useCart();
 </script>

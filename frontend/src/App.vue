@@ -1,16 +1,17 @@
 <template>
-  <div id="app">
-    <SiteHeader />
-
-    <main>
-      <router-view />
-    </main>
-  </div>
+  <CartProvider>
+    <div id="app">
+      <SiteHeader />
+      <StickyCart />
+      <main>
+        <router-view />
+      </main>
+    </div>
+  </CartProvider>
 </template>
 
 <script setup lang="ts">
-import SiteHeader from "./components/site-header.vue";
-import { useProvideCart } from "./composables/useCart";
-
-useProvideCart();
+import CartProvider from "./components/CartProvider.vue";
+import SiteHeader from "./components/SiteHeader.vue";
+import StickyCart from "./components/StickyCart.vue";
 </script>

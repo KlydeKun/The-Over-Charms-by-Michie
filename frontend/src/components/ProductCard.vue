@@ -35,7 +35,7 @@
     <Button
       variant="outline"
       class="mt-auto w-full py-2.5 rounded-xl bg-card border border-foreground/10 text-foreground text-xs font-semibold hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all active:scale-[0.98]"
-      @click="handleAddToCart"
+      @click="handleAddToCart(product)"
     >
       {{ handleHasOptions(product) ? "Select Options" : "Add to Cart" }}
     </Button>
