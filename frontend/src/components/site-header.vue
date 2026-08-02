@@ -21,7 +21,9 @@
       </router-link>
       <div class="flex items-center gap-2 sm:gap-3">
         <router-link to="/menu" class="hidden sm:inline-flex text-sm font-medium px-4 py-2 rounded-full border border-foreground/10 hover:bg-foreground/5 transition-colors">Menu</router-link>
-        <router-link to="/cart" class="relative text-sm font-medium px-4 py-2 rounded-full border border-foreground/10 hover:bg-foreground/5 transition-colors">Cart</router-link>
+        <router-link to="/cart" class="relative text-sm font-medium px-4 py-2 rounded-full border border-foreground/10 hover:bg-foreground/5 transition-colors">Cart
+          <span v-if="totalItems > 0" class="absolute -top-1 -right-1 size-5 bg-primary text-primary-foreground text-[10px] font-mono font-bold rounded-full grid place-items-center ring-2 ring-background">{{ totalItems }}</span>
+        </router-link>
         <router-link to="/menu" class="hidden sm:inline-flex text-sm font-medium bg-primary text-primary-foreground px-5 py-2 rounded-full hover:brightness-110 transition-all">Order Now</router-link>
       </div>
     </div>
@@ -29,5 +31,12 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import logo from '@/assets/images/logo.jpg'
+import { useCart } from '@/composables/useCart';
+
+const { items } = useCart();
+const totalItems = computed(() =>
+  items.reduce((total, item) => total + item.quantity, 0),
+);
 </script>

@@ -19,8 +19,8 @@
         </div>
       </div>
       <p class="text-xs text-muted-foreground mt-6">
-        Free delivery on orders. Same-day delivery for orders placed
-        before 2 PM.
+        Delivery is available for reserved orders only. Please reserve in
+        advance for your preferred delivery date and time.
       </p>
     </div>
   </section>

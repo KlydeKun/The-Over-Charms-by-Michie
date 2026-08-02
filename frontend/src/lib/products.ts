@@ -50,7 +50,7 @@ export function getProduct(id: string): Product | undefined {
 
 export const products: Product[] = [
   {
-    id: "choco-fudge-brownies-box",
+    id: "b1599b20-39de-47e1-80d6-a511ae4e6a4f",
     name: "Choco Fudge Brownies (Box of 6)",
     description:
       "Rich, fudgy chocolate brownies topped with a chocolate drizzle or crushed nuts.",
@@ -70,34 +70,9 @@ export const products: Product[] = [
       "Crushed nuts",
     ],
     allergens: ["Eggs", "Milk", "Wheat/Gluten", "Tree nuts"],
-    options: [
-      {
-        id: "topping",
-        label: "Topping Mix",
-        type: "single",
-        options: [
-          {
-            id: "assorted",
-            label: "Assorted (Chocolate Drizzle & Nuts)",
-            priceDelta: 0,
-          },
-          { id: "all-drizzle", label: "All Chocolate Drizzle", priceDelta: 0 },
-          { id: "all-nuts", label: "All Nuts", priceDelta: 0 },
-        ],
-      },
-      {
-        id: "box-size",
-        label: "Box Size",
-        type: "single",
-        options: [
-          { id: "box-6", label: "Box of 6", priceDelta: 0 },
-          { id: "box-12", label: "Box of 12", priceDelta: 380 },
-        ],
-      },
-    ],
   },
   {
-    id: "chocolate-crinkles",
+    id: "cad60d8b-6580-427d-839f-5a4dc7d76125",
     name: "Chocolate Crinkles",
     description:
       "Soft, fudgy chocolate cookies rolled in powdered sugar with a signature crackled top.",
@@ -115,20 +90,9 @@ export const products: Product[] = [
       "Powdered sugar",
     ],
     allergens: ["Eggs", "Milk", "Wheat/Gluten"],
-    options: [
-      {
-        id: "pack-size",
-        label: "Pack Size",
-        type: "single",
-        options: [
-          { id: "pack-6", label: "Pack of 6", priceDelta: 0 },
-          { id: "pack-12", label: "Pack of 12", priceDelta: 160 },
-        ],
-      },
-    ],
   },
   {
-    id: "cookie-bites-choco-dip",
+    id: "71b2f2e5-1667-474e-afcb-7f807954c082",
     name: "Cookie Bites with Chocolate Dip",
     description:
       "Bite-sized chocolate chip cookie bites served with a warm chocolate dipping sauce.",
@@ -147,24 +111,9 @@ export const products: Product[] = [
       "Chocolate dipping sauce",
     ],
     allergens: ["Eggs", "Milk", "Wheat/Gluten"],
-    options: [
-      {
-        id: "dip",
-        label: "Dip Add-on",
-        type: "multi",
-        options: [
-          {
-            id: "extra-choco-dip",
-            label: "Extra Chocolate Dip",
-            priceDelta: 40,
-          },
-          { id: "caramel-dip", label: "Add Caramel Dip", priceDelta: 45 },
-        ],
-      },
-    ],
   },
   {
-    id: "cheese-ensaymada",
+    id: "191cb68d-bbf2-4f70-b7b5-c2945530340a",
     name: "Cheese Ensaymada",
     description:
       "Soft, buttery ensaymada roll generously topped with grated cheese.",
@@ -183,23 +132,9 @@ export const products: Product[] = [
       "Milk",
     ],
     allergens: ["Eggs", "Milk", "Wheat/Gluten"],
-    options: [
-      {
-        id: "extra-cheese",
-        label: "Add-ons",
-        type: "multi",
-        options: [
-          {
-            id: "extra-cheese-topping",
-            label: "Extra Cheese Topping",
-            priceDelta: 20,
-          },
-        ],
-      },
-    ],
   },
   {
-    id: "nutella-burnt-basque-cheesecake",
+    id: "33b3fa14-afe1-4480-8d4e-c51dbea9e0a9",
     name: "Nutella Burnt Basque Cheesecake",
     description:
       "Creamy burnt Basque-style cheesecake topped with a generous swirl of Nutella.",
@@ -217,20 +152,9 @@ export const products: Product[] = [
       "Nutella hazelnut spread",
     ],
     allergens: ["Eggs", "Milk", "Tree nuts (Hazelnut)"],
-    options: [
-      {
-        id: "size",
-        label: "Size",
-        type: "single",
-        options: [
-          { id: "mini", label: "Mini (4-inch)", priceDelta: 0 },
-          { id: "whole", label: "Whole (8-inch)", priceDelta: 650 },
-        ],
-      },
-    ],
   },
   {
-    id: "strawberry-cheesecake",
+    id: "d1326b75-1d60-48d6-bb4a-84ce9446ee94",
     name: "Strawberry Burnt Cheesecake",
     description:
       "Burnt Basque cheesecake topped with a glossy homemade strawberry compote.",
@@ -248,20 +172,9 @@ export const products: Product[] = [
       "Strawberry compote",
     ],
     allergens: ["Eggs", "Milk"],
-    options: [
-      {
-        id: "size",
-        label: "Size",
-        type: "single",
-        options: [
-          { id: "mini", label: "Mini (4-inch)", priceDelta: 0 },
-          { id: "whole", label: "Whole (8-inch)", priceDelta: 650 },
-        ],
-      },
-    ],
   },
   {
-    id: "cashew-banana-loaf",
+    id: "349f2715-acab-4132-a440-778f4a667ece",
     name: "Cashew Banana Loaf",
     description: "Moist banana bread loaf topped with whole cashews.",
     longDescription:
@@ -278,20 +191,9 @@ export const products: Product[] = [
       "Cashews",
     ],
     allergens: ["Eggs", "Milk", "Wheat/Gluten", "Tree nuts (Cashew)"],
-    options: [
-      {
-        id: "slice",
-        label: "Format",
-        type: "single",
-        options: [
-          { id: "whole-loaf", label: "Whole Loaf", priceDelta: 0 },
-          { id: "half-loaf", label: "Half Loaf", priceDelta: -120 },
-        ],
-      },
-    ],
   },
   {
-    id: "biscoff-cheesecake",
+    id: "d3aabc42-1c09-4b14-bf86-ba7235e295cb",
     name: "Biscoff Burnt Cheesecake",
     description:
       "Burnt Basque cheesecake layered with Biscoff spread and topped with a Lotus Biscoff cookie.",
@@ -312,7 +214,7 @@ export const products: Product[] = [
     allergens: ["Eggs", "Milk", "Wheat/Gluten", "Soy"],
   },
   {
-    id: "blueberry-cheesecake",
+    id: "179e652b-f183-4d52-aa68-6a6453f6581a",
     name: "Blueberry Burnt Cheesecake",
     description:
       "Burnt Basque cheesecake topped with a rich homemade blueberry compote.",
@@ -332,7 +234,7 @@ export const products: Product[] = [
     allergens: ["Eggs", "Milk"],
   },
   {
-    id: "classic-burnt-basque-cheesecake",
+    id: "d6d0731a-783f-4bdf-af17-c881f859bf5f",
     name: "Classic Burnt Basque Cheesecake",
     description:
       "Our original crustless burnt Basque cheesecake with a deep caramelized top and creamy center.",
