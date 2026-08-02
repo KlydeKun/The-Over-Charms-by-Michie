@@ -5,7 +5,7 @@ import NutellaBurntCheeseCake from "@/assets/images/nutella_burnt_basque_cheesec
 import StrawberryCheesecake from "@/assets/images/strawberry_cheesecake.jpg";
 import BananaLoaf from "@/assets/images/banana_loaf.png";
 import ChocoBrownies from "@/assets/images/choco_brownies.png";
-import ChocoCrinkles from "@/assets/images/chocolate_crinkles.jpg";
+import ChocoCrinkles from "@/assets/images/chocolate_crinkles.png";
 import CookieBites from "@/assets/images/cookie_bites_with_choco_dip.jpg";
 import Ensaymada from "@/assets/images/ensaymada.png";
 
