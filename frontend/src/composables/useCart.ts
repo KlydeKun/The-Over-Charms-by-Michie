@@ -1,4 +1,14 @@
-import { inject, provide, reactive, type InjectionKey } from "vue";
+import {
+  computed,
+  inject,
+  onMounted,
+  provide,
+  ref,
+  watch,
+  type ComputedRef,
+  type InjectionKey,
+  type Ref,
+} from "vue";
 
 export interface CartItem {
   id: string;
@@ -9,7 +19,9 @@ export interface CartItem {
 }
 
 export interface CartContextValue {
-  items: CartItem[];
+  items: Ref<CartItem[]>;
+  totalItems: ComputedRef<number>;
+  subTotal: ComputedRef<number>;
   addItem: (item: CartItem) => void;
   removeItem: (id: string) => void;
   updateQuantity?: (id: string, quantity: number) => void;
@@ -30,29 +42,38 @@ export function provideCart(value: CartContextValue): void {
 }
 
 export function useProvideCart(): CartContextValue {
-  const items = reactive<CartItem[]>([]);
+  const STORAGE_KEY = "the-oven-charm-v1";
+  const items = ref<CartItem[]>([]);
+
+  const totalItems = computed<number>(() =>
+    items.value.reduce((total, item) => total + item.quantity, 0),
+  );
+
+  const subTotal = computed<number>(() =>
+    items.value.reduce((total, item) => total + item.price * item.quantity, 0),
+  );
 
   function addItem(item: CartItem) {
-    const existingItem = items.find((cartItem) => cartItem.id === item.id);
+    const existingItem = items.value.find(
+      (cartItem) => cartItem.id === item.id,
+    );
 
     if (existingItem) {
       existingItem.quantity += item.quantity;
       return;
     }
 
-    items.push(item);
+    items.value.push(item);
   }
 
   function removeItem(id: string) {
-    const itemIndex = items.findIndex((item) => item.id === id);
-    if (itemIndex !== -1)
-      items.splice(itemIndex, 1);
+    const itemIndex = items.value.findIndex((item) => item.id === id);
+    if (itemIndex !== -1) items.value.splice(itemIndex, 1);
   }
 
   function updateQuantity(id: string, quantity: number) {
-    const item = items.find((cartItem) => cartItem.id === id);
-    if (!item)
-      return;
+    const item = items.value.find((cartItem) => cartItem.id === id);
+    if (!item) return;
 
     if (quantity <= 0) {
       removeItem(id);
@@ -63,10 +84,41 @@ export function useProvideCart(): CartContextValue {
   }
 
   function clearCart() {
-    items.splice(0);
+    items.value.splice(0);
   }
 
-  const cart = { items, addItem, removeItem, updateQuantity, clearCart };
+  onMounted(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        items.value = JSON.parse(raw);
+      }
+    } catch (error) {
+      console.error("Failed to parse storage:", error);
+    }
+  });
+
+  watch(
+    items,
+    (newLines) => {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(newLines));
+      } catch (error) {
+        console.error("Failed to save to storage:", error);
+      }
+    },
+    { deep: true },
+  );
+
+  const cart = {
+    items,
+    totalItems,
+    subTotal,
+    addItem,
+    removeItem,
+    updateQuantity,
+    clearCart,
+  };
   provideCart(cart);
 
   return cart;
