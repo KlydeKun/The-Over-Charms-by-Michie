@@ -3,8 +3,9 @@
     <div class="grid gap-8 md:grid-cols-3">
       <div>
         <span class="font-display text-xl font-bold">The Oven Charms</span>
-        <p class="mt-3 text-sm text-muted-foreground max-w-xs">
-          Discover the delighted treats crafted with love from Pasig City.
+        <p class="mt-3 text-sm text-muted-foreground max-w-xs text-justify">
+          At The Oven Charms by Michie, we craft fresh breads, pastries, and
+          cakes with passion and quality ingredients.
         </p>
       </div>
       <div>
