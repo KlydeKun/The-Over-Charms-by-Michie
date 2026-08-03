@@ -1,7 +1,7 @@
 <template>
   <div
     v-for="(product, index) in items"
-    :key="index"
+    :key="product.id"
     class="group animate-fade-up flex flex-col"
     :style="{ animationDelay: `${Math.min(index * 60, 400)}ms` }"
   >
