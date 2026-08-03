@@ -14,4 +14,20 @@ import Delivery from "@/components/home/Delivery.vue";
 import Footer from "@/components/home/Footer.vue";
 import Hero from "@/components/home/Hero.vue";
 import Testimonial from "@/components/home/Testimonial.vue";
+import { useHead } from "@unhead/vue";
+
+useHead({
+  title: "The Oven Charms by Michie",
+  meta: [
+    {
+      name: "description",
+      content: "Discover delighted treats crafted with LOVE",
+    },
+    { property: "og:title", content: "The Oven Charms by Michie" },
+    {
+      property: "og:description",
+      content: "Baking dreams one charm at a time",
+    },
+  ],
+});
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div
-    v-for="(product, index) in bestSellers"
+    v-for="(product, index) in items"
     :key="index"
     class="group animate-fade-up flex flex-col"
     :style="{ animationDelay: `${Math.min(index * 60, 400)}ms` }"
@@ -12,10 +12,9 @@
       <img
         :src="product.image"
         :alt="product.name"
-        loading="lazy"
-        width="{768}"
-        height="{768}"
-        class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+        :width="768"
+        :height="768"
+        class="cursor-pointer w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
       />
     </div>
     <div class="flex justify-between items-start mb-1 gap-2">
@@ -44,14 +43,16 @@
 
 <script setup lang="ts">
 import { formatPrice, useCart } from "@/composables/useCart";
-import { products, type Product } from "@/lib/products";
-import { Button } from "./ui/button";
+import { type Product } from "@/lib/products";
 import { useRouter } from "vue-router";
+import { Button } from "./ui/button";
+
+defineProps<{
+  items: Product[];
+}>();
 
 const router = useRouter();
 const { addItem } = useCart();
-
-const bestSellers = products.filter((p) => p.bestSeller).slice(0, 4);
 
 const handleHasOptions = (product: Product) => {
   return (product.options?.length ?? 0) > 0;
