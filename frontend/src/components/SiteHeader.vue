@@ -11,12 +11,14 @@
         >
           <img :src="logo" alt="logo" class="rounded-full" />
         </span>
-        <p
-          class="font-display text-normal sm:text-lg font-bold tracking-tight truncate"
-        >
-          The Oven Charms
-          <span class="text-xs text-muted-foreground">by Michie</span>
-        </p>
+        <div>
+          <p
+            class="font-display text-normal sm:text-lg font-bold tracking-tight truncate"
+          >
+            The Oven Charms
+          </p>
+          <p class="text-xs text-muted-foreground">by Michie</p>
+        </div>
       </router-link>
       <div class="flex items-center gap-2 sm:gap-3">
         <router-link

@@ -14,16 +14,24 @@
       <router-link
         to="/menu"
         class="hidden sm:inline-flex text-xs font-semibold px-4 py-2 rounded-full border border-foreground/10 hover:bg-foreground/5 transition-colors"
+        @click="scrollToTop"
       >
         See all →
       </router-link>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
-      <ProductCard />
+      <ProductCard :items="bestSellers" />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { products } from "@/lib/products.ts";
 import ProductCard from "../ProductCard.vue";
+
+const bestSellers = products.filter((p) => p.bestSeller).slice(0, 4);
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 </script>
