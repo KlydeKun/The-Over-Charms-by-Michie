@@ -26,21 +26,20 @@
         </h4>
         <div class="flex gap-4 text-sm font-medium">
           <a
-            :href="instagramLink"
+            :href="links.instagram"
             target="_blank"
             class="underline decoration-foreground/20 underline-offset-4"
             >Instagram</a
           >
           <a
-            :href="facebookLink"
+            :href="links.facebook"
             target="_blank"
             class="underline decoration-foreground/20 underline-offset-4"
             >Facebook</a
           >
           <a
-            href="#"
+            :href="links.email"
             target="_blank"
-            rel="noopener noreferrer"
             class="underline decoration-foreground/20 underline-offset-4"
           >
             Email
@@ -57,8 +56,5 @@
 </template>
 
 <script setup lang="ts">
-const facebookLink =
-  "https://www.facebook.com/people/The-Oven-Charms-by-Michie/61550980702278/";
-
-const instagramLink = "https://www.instagram.com/theovencharmsbymichie";
+import { links } from "@/constants/footer-link";
 </script>
