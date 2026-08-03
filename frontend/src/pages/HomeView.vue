@@ -21,7 +21,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "Discover delighted treats crafted with LOVE",
+      content: "Discover delightful treats crafted with LOVE",
     },
     { property: "og:title", content: "The Oven Charms by Michie" },
     {
