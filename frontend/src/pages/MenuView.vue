@@ -10,12 +10,13 @@
     </div>
 
     <div class="mb-6 max-w-md mx-auto">
-      <input
+      <Input
         id="search"
         v-model="query"
         type="search"
         placeholder="Search cookies, bread…"
-        class="w-full px-5 py-3 rounded-full border border-foreground/10 bg-card text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+        size="lg"
+        class="w-full px-6 py-6 rounded-full border border-foreground/10 bg-card text-sm"
       />
     </div>
 
@@ -55,6 +56,7 @@ import { useHead } from "@unhead/vue";
 import { products, categories, type Category } from "@/lib/products";
 import ProductCard from "@/components/ProductCard.vue";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 useHead({
   title: "The Oven Charms by Michie",
