@@ -3,6 +3,7 @@ import CheckoutView from "@/pages/CheckoutView.vue";
 import HomePage from "@/pages/HomeView.vue";
 import MenuView from "@/pages/MenuView.vue";
 import OrderView from "@/pages/OrderView.vue";
+import ProductView from "@/pages/ProductView.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -30,6 +31,11 @@ const routes = [
     path: "/checkout",
     name: "checkout",
     component: CheckoutView,
+  },
+  {
+    path: "/product/:id",
+    name: "product",
+    component: ProductView,
   },
 ];
 
