@@ -99,7 +99,7 @@
               size="lg"
               @click="() => handleAddToCart(false)"
             >
-              Add - {{ formatPrice(totalUnit * quantity) }}
+              Add - {{ formatPrice(totalPrice * quantity) }}
             </Button>
             <Button
               class="flex-1 py-6 rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all active:scale-[0.98]"
@@ -113,12 +113,15 @@
       </div>
     </div>
 
-    <div v-else class="text-center py-24">
-      <h1 class="font-display text-3xl mb-3">Product not found</h1>
+    <div v-else class="max-w-md mx-auto text-center py-24 px-6">
+      <h1 class="font-display text-3xl mb-2">Product not found</h1>
       <p class="text-muted-foreground mb-6">
         We could not find a product for this link.
       </p>
-      <Button as-child>
+      <Button
+        as-child
+        class="text-sm font-medium text-primary underline underline-offset-4"
+      >
         <router-link to="/menu">Back to menu</router-link>
       </Button>
     </div>
@@ -137,6 +140,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { toast } from "vue-sonner";
+import { useHead } from "@unhead/vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -159,7 +164,7 @@ const selected = ref<Record<string, string | string[]>>(
   })(),
 );
 
-const totalUnit = computed(() => {
+const totalPrice = computed(() => {
   const options = product.value?.options ?? [];
 
   const delta = options.reduce((sum, group) => {
@@ -198,14 +203,37 @@ const getGroupDelta = (
 const handleAddToCart = (gotoCart: boolean) => {
   if (!product.value) return;
 
-  addItem({
+  console.log("Added:", {
     id: product.value.id,
     name: product.value.name,
-    price: product.value.price,
-    quantity: 1,
+    price: totalPrice.value,
+    quantity: quantity.value,
     image: product.value.image,
   });
 
+  addItem({
+    id: product.value.id,
+    name: product.value.name,
+    price: totalPrice.value,
+    quantity: quantity.value,
+    image: product.value.image,
+  });
+
+  toast.success(`${quantity.value} × ${product.value.name} added`);
   if (gotoCart) router.push({ name: "cart" });
 };
+
+useHead(() => {
+  if (product.value) {
+    return {
+      title: product.value.name,
+      meta: [
+        { name: "description", content: product.value.longDescription },
+        { property: "og:title", content: product.value.name },
+        { property: "og:description", content: product.value.longDescription },
+        { property: "og:image", content: product.value.image },
+      ],
+    };
+  }
+});
 </script>
