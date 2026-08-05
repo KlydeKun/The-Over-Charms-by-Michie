@@ -127,3 +127,7 @@ export function useProvideCart(): CartContextValue {
 export function formatPrice(n: number) {
   return `₱${n.toFixed(2)}`;
 }
+
+export function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}

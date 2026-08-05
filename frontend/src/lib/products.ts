@@ -51,12 +51,12 @@ export function getProduct(id: string): Product | undefined {
 export const products: Product[] = [
   {
     id: "b1599b20-39de-47e1-80d6-a511ae4e6a4f",
-    name: "Choco Fudge Brownies (Box of 6)",
+    name: "Choco Fudge Brownies",
     description:
       "Rich, fudgy chocolate brownies topped with a chocolate drizzle or crushed nuts.",
     longDescription:
-      "A box of six dense, fudgy chocolate brownies baked to a deep, glossy crackle-top finish. Half the batch is finished with a swirl of melted chocolate drizzle, the other half topped with crushed nuts for a bit of crunch. Perfect for sharing, gifting, or a serious chocolate craving.",
-    price: 420,
+      "A box of six dense, fudgy chocolate brownies baked to a deep, glossy crackle-top finish. Half the batch is finished with a swirl of melted chocolate drizzle, the other half topped with crushed nuts for a bit of crunch.",
+    price: 250,
     image: ChocoBrownies,
     category: "Brownies",
     bestSeller: true,
@@ -78,7 +78,7 @@ export const products: Product[] = [
       "Soft, fudgy chocolate cookies rolled in powdered sugar with a signature crackled top.",
     longDescription:
       "Classic chocolate crinkle cookies with a soft, brownie-like center and a delicate crackled sugar coating. Rich cocoa flavor in every bite, generously dusted with powdered sugar for that signature marbled look.",
-    price: 180,
+    price: 150,
     image: ChocoCrinkles,
     category: "Cookies",
     ingredients: [
@@ -98,7 +98,7 @@ export const products: Product[] = [
       "Bite-sized chocolate chip cookie bites served with a warm chocolate dipping sauce.",
     longDescription:
       "Soft, chewy chocolate chip cookie bites baked to golden perfection and served with a rich, warm chocolate dipping sauce on the side. A fun, shareable treat that's equal parts cozy and indulgent.",
-    price: 195,
+    price: 120,
     image: CookieBites,
     category: "Cookies",
     bestSeller: true,
@@ -179,7 +179,7 @@ export const products: Product[] = [
     description: "Moist banana bread loaf topped with whole cashews.",
     longDescription:
       "A moist, dense banana bread loaf made with ripe bananas and baked until golden, topped generously with whole roasted cashews for added crunch and nutty flavor. A comforting classic, great for breakfast or an afternoon snack.",
-    price: 260,
+    price: 150,
     image: BananaLoaf,
     category: "Bread",
     ingredients: [
