@@ -28,10 +28,7 @@
 <script setup lang="ts">
 import { products } from "@/lib/products.ts";
 import ProductCard from "../ProductCard.vue";
+import { scrollToTop } from "@/composables/useCart.ts";
 
 const bestSellers = products.filter((p) => p.bestSeller).slice(0, 4);
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
 </script>

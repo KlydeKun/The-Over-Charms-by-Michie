@@ -15,7 +15,6 @@
         v-model="query"
         type="search"
         placeholder="Search cookies, bread…"
-        size="lg"
         class="w-full px-6 py-6 rounded-full border border-foreground/10 bg-card text-sm"
       />
     </div>

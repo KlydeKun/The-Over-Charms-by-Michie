@@ -60,7 +60,8 @@ const handleHasOptions = (product: Product) => {
 
 const handleClickImage = (product: Product) => {
   router.push({
-    path: `/product/${product.id}`,
+    name: "product",
+    params: { id: product.id },
   });
 };
 
