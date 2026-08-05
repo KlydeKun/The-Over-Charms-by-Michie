@@ -3,6 +3,7 @@ import { createHead } from "@unhead/vue/client";
 import App from "./App.vue";
 import "./style.css";
 import { router } from "./router/route";
+import 'vue-sonner/style.css'
 
 const app = createApp(App);
 const head = createHead();

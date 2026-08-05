@@ -1,6 +1,7 @@
 <template>
   <CartProvider>
     <div id="app">
+      <Toaster position="top-center" />
       <SiteHeader />
       <StickyCart />
       <main>
@@ -14,4 +15,5 @@
 import CartProvider from "./components/CartProvider.vue";
 import SiteHeader from "./components/SiteHeader.vue";
 import StickyCart from "./components/StickyCart.vue";
+import { Toaster } from 'vue-sonner'
 </script>

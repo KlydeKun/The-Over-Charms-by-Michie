@@ -46,6 +46,7 @@ import { formatPrice, useCart } from "@/composables/useCart";
 import { type Product } from "@/lib/products";
 import { useRouter } from "vue-router";
 import { Button } from "./ui/button";
+import { toast } from "vue-sonner";
 
 defineProps<{
   items: Product[];
@@ -73,5 +74,6 @@ const handleAddToCart = (product: Product) => {
     price: product.price,
     quantity: 1,
   });
+  toast.success(`${product.name} added`, { duration: 1500 });
 };
 </script>
