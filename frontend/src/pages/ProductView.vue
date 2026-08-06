@@ -45,7 +45,7 @@
             <Button
               variant="ghost"
               @click="quantity = Math.max(1, quantity - 1)"
-              class="size-10 grid place-items-center hover:bg-foreground/5"
+              class="size-10 rounded-full flex justify-center items-center hover:bg-foreground/5"
               aria-label="Decrease"
             >
               -
@@ -56,7 +56,7 @@
             <Button
               variant="ghost"
               @click="quantity++"
-              class="size-10 grid place-items-center hover:bg-foreground/5"
+              class="size-10 rounded-full flex justify-center items-center hover:bg-foreground/5"
               aria-label="Increase"
             >
               +
@@ -102,7 +102,7 @@
               Add - {{ formatPrice(totalPrice * quantity) }}
             </Button>
             <Button
-              class="flex-1 py-6 rounded-xl bg-primary text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all active:scale-[0.98]"
+              class="flex-1 py-6 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:brightness-110 transition-all active:scale-[0.98]"
               size="lg"
               @click="() => handleAddToCart(true)"
             >
