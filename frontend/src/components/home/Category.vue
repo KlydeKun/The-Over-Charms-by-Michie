@@ -15,6 +15,7 @@
         :key="index"
         :to="{ path: '/menu', query: { category: category } }"
         class="group relative aspect-4/5 rounded-2xl overflow-hidden bg-card border border-foreground/5"
+        @click="scrollToTop"
       >
         <img
           :src="getSrc(category)"
@@ -33,6 +34,7 @@
 </template>
 
 <script setup lang="ts">
+import { scrollToTop } from "@/composables/useCart";
 import { categories, products } from "@/lib/products";
 
 const getSrc = (c: string) => products.find((p) => p.category === c)?.image;
