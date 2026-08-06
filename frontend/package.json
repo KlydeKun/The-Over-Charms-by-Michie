@@ -13,6 +13,8 @@
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/vue-query": "^5.101.4",
     "@unhead/vue": "^3.2.3",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "@vueuse/core": "^14.4.0",
     "axios": "^1.19.0",
     "class-variance-authority": "^0.7.1",
