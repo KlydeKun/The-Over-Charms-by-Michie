@@ -130,5 +130,5 @@ const delivery = computed(() => {
   }
 });
 
-const total = subTotal.value + delivery.value;
+const total = computed(() => subTotal.value + delivery.value);
 </script>
