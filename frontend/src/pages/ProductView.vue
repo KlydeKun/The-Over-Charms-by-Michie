@@ -45,7 +45,7 @@
             <Button
               variant="ghost"
               @click="quantity = Math.max(1, quantity - 1)"
-              class="size-10 rounded-full flex items-center hover:bg-foreground/5"
+              class="size-10 rounded-full flex justify-center items-center hover:bg-foreground/5"
               aria-label="Decrease"
             >
               -
@@ -56,7 +56,7 @@
             <Button
               variant="ghost"
               @click="quantity++"
-              class="size-10 rounded-full flex items-center hover:bg-foreground/5"
+              class="size-10 rounded-full flex justify-center items-center hover:bg-foreground/5"
               aria-label="Increase"
             >
               +
