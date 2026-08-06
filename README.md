@@ -25,50 +25,19 @@ The project follows a decoupled architecture where the frontend communicates wit
 - shadcn-vue
 - Axios
 
-## Backend
-
-- Laravel
-- PHP 8.3+
-- REST API
-- Eloquent ORM
-
-## Database
-
-- MySQL
-
-## Development Tools
-
-- Composer
-- npm
-- Git
-- GitHub
-
----
-
 # 📁 Project Structure
 
 ```text
 The-Over-Charms-by-Michie/
 │
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   ├── components/
-│   ├── pages/
-│   ├── layouts/
-│   ├── router/
-│   ├── stores/
-│   ├── services/
-│   └── assets/
-│
-├── backend/
-│   ├── app/
-│   ├── routes/
-│   ├── database/
-│   ├── storage/
-│   ├── config/
-│   └── public/
-│
+├── src/
+├── public/
+├── components/
+├── pages/
+├── router/
+├── stores/
+├── services/
+├── assets/
 └── README.md
 ```
 
