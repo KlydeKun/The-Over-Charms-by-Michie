@@ -119,10 +119,8 @@
 <script setup lang="ts">
 import { Button } from "@/components/ui/button";
 import { formatPrice, useCart } from "@/composables/useCart";
+import { DELIVERY_FEE, FREE_THRESHOLD } from "@/constants/cart.constant";
 import { computed } from "vue";
-
-const DELIVERY_FEE = 5;
-const FREE_THRESHOLD = 500;
 
 const { items, subTotal, updateQuantity, removeItem } = useCart();
 
