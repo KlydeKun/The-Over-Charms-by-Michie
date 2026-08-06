@@ -1,5 +1,12 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import { createHead } from "@unhead/vue/client";
+import App from "./App.vue";
+import "./style.css";
+import { router } from "./router/route";
+import 'vue-sonner/style.css'
 
-createApp(App).mount('#app')
+const app = createApp(App);
+const head = createHead();
+app.use(head);
+app.use(router);
+app.mount("#app");
