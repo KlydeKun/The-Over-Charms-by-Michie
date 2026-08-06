@@ -175,11 +175,11 @@ export const products: Product[] = [
   },
   {
     id: "349f2715-acab-4132-a440-778f4a667ece",
-    name: "Cashew Banana Loaf",
+    name: "Banana Loaf",
     description: "Moist banana bread loaf topped with whole cashews.",
     longDescription:
       "A moist, dense banana bread loaf made with ripe bananas and baked until golden, topped generously with whole roasted cashews for added crunch and nutty flavor. A comforting classic, great for breakfast or an afternoon snack.",
-    price: 150,
+    price: 220,
     image: BananaLoaf,
     category: "Bread",
     ingredients: [

@@ -6,7 +6,7 @@
       <span
         class="font-mono text-[10px] uppercase tracking-[0.25em] text-primary mb-4 block"
       >
-        Est. 2023 — Bake With Love
+        Est. 2021 — Bake With Love
       </span>
       <div class="relative">
         <h1
@@ -30,12 +30,14 @@
         <router-link
           to="/menu"
           class="text-sm font-medium bg-primary text-primary-foreground px-6 py-3 rounded-full hover:brightness-110 transition-all"
+          @click="scrollToTop"
         >
           Order Now
         </router-link>
         <router-link
           to="/menu"
           class="text-sm font-medium px-6 py-3 rounded-full border border-foreground/10 hover:bg-foreground/5 transition-colors"
+          @click="scrollToTop"
         >
           View Menu
         </router-link>
@@ -58,4 +60,5 @@
 <script setup lang="ts">
 import ribbon from "@/assets/images/ribbon_no_bg_1.png";
 import heroImage from "@/assets/images/hero_image.jpg";
+import { scrollToTop } from "@/composables/useCart";
 </script>
