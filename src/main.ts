@@ -3,7 +3,13 @@ import { createHead } from "@unhead/vue/client";
 import App from "./App.vue";
 import "./style.css";
 import { router } from "./router/route";
-import 'vue-sonner/style.css'
+import "vue-sonner/style.css";
+import { inject } from "@vercel/analytics";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+
+// Initialize Vercel tracking
+inject();
+injectSpeedInsights();
 
 const app = createApp(App);
 const head = createHead();
