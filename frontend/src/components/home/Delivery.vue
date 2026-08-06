@@ -9,7 +9,7 @@
       <h2 class="font-display text-2xl sm:text-3xl mb-8 italic">
         Baking for our neighbors
       </h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
         <div
           v-for="(place, index) in places"
           :key="index"
@@ -29,5 +29,5 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 
-const places = reactive(["Pasig", "Pinagbuhatan", "Pateros", "San Miguel"]);
+const places = reactive(["Pasig", "Pinagbuhatan", "San Miguel"]);
 </script>
