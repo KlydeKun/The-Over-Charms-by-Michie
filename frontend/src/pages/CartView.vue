@@ -9,8 +9,12 @@
     >
       ← Keep shopping
     </router-link>
-    <ul v-for="item in items" :key="item.id" class="space-y-3 mb-8">
-      <li class="flex gap-4 p-3 bg-card border border-foreground/5 rounded-2xl">
+    <ul class="space-y-3 mb-8">
+      <li
+        v-for="item in items"
+        :key="item.id"
+        class="flex gap-4 p-3 bg-card border border-foreground/5 rounded-2xl"
+      >
         <router-link :to="`/product/${item.id}`">
           <img
             :src="item.image"
