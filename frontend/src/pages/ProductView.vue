@@ -28,19 +28,19 @@
           <h1 class="font-display text-3xl sm:text-4xl leading-tight mb-3">
             {{ product.name }}
           </h1>
-          <p className="font-mono text-base mb-4">
+          <p class="font-mono text-base mb-4">
             {{ formatPrice(product.price) }}
           </p>
           <p class="text-muted-foreground leading-relaxed mb-8">
             {{ product.longDescription }}
           </p>
         </div>
-        <div className="mb-8">
-          <h3 className="text-xs font-semibold uppercase tracking-widest mb-3">
+        <div class="mb-8">
+          <h3 class="text-xs font-semibold uppercase tracking-widest mb-3">
             Quantity
           </h3>
           <div
-            className="inline-flex items-center bg-card border border-foreground/10 rounded-full overflow-hidden"
+            class="inline-flex items-center bg-card border border-foreground/10 rounded-full overflow-hidden"
           >
             <Button
               variant="ghost"
@@ -50,7 +50,7 @@
             >
               -
             </Button>
-            <span className="w-10 text-center font-mono text-sm">{{
+            <span class="w-10 text-center font-mono text-sm">{{
               quantity
             }}</span>
             <Button

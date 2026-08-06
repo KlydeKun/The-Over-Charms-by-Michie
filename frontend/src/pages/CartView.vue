@@ -25,13 +25,13 @@
           />
         </router-link>
         <div class="flex-1 min-w-0 flex flex-col">
-          <div className="flex justify-between gap-3">
-            <div className="min-w-0">
-              <h3 className="font-display text-lg leading-tight truncate">
+          <div class="flex justify-between gap-3">
+            <div class="min-w-0">
+              <h3 class="font-display text-lg leading-tight truncate">
                 {{ item.name }}
               </h3>
             </div>
-            <span className="font-mono text-sm shrink-0">
+            <span class="font-mono text-sm shrink-0">
               {{ formatPrice(item.price * item.quantity) }}
             </span>
           </div>
