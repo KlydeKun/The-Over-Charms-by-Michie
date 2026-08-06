@@ -40,7 +40,7 @@
               class="inline-flex items-center bg-background border border-foreground/10 rounded-full"
             >
               <Button
-                class="size-8 flex items-center rounded-full hover:bg-foreground/5"
+                class="size-8 flex items-center rounded-full hover:bg-foreground/5 cursor-pointer"
                 aria-label="Decrease"
                 variant="ghost"
                 @click="() => updateQuantity?.(item.id, item.quantity - 1)"
@@ -51,7 +51,7 @@
                 item.quantity
               }}</span>
               <Button
-                class="size-8 flex items-center rounded-full hover:bg-foreground/5"
+                class="size-8 flex items-center rounded-full hover:bg-foreground/5 cursor-pointer"
                 aria-label="Increase"
                 variant="ghost"
                 @click="() => updateQuantity?.(item.id, item.quantity + 1)"
@@ -61,7 +61,7 @@
             </div>
             <Button
               variant="ghost"
-              class="p-0 text-xs text-muted-foreground underline underline-offset-4 hover:bg-transparent hover:text-destructive focus:bg-transparent active:bg-transparent"
+              class="p-0 text-xs text-muted-foreground underline underline-offset-4 hover:bg-transparent hover:text-destructive focus:bg-transparent active:bg-transparent cursor-pointer"
               @click="removeItem(item.id)"
             >
               Remove
