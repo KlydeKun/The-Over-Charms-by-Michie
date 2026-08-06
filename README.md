@@ -160,4 +160,4 @@ This project is licensed under the MIT License.
 
 **Kyle Lerio**
 
-Built with ❤️ using Vue 3, Laravel, and MySQL.
+Built with ❤️ using Vue 3.
