@@ -51,22 +51,9 @@ The-Over-Charms-by-Michie/
 - View product details
 - Search products
 - Filter by category
-- View promotions
-- Browse gallery
+- Browse Menu
 - Contact the bakery
-- View bakery location
 - Responsive design
-
-## Admin (Planned)
-
-- Dashboard
-- Product Management
-- Category Management
-- Inventory Management
-- Customer Management
-- Order Management
-- Sales Reports
-- Banner Management
 
 ---
 
@@ -104,102 +91,6 @@ npm run dev
 
 ---
 
-# Backend Setup
-
-```bash
-cd backend
-```
-
-Install dependencies
-
-```bash
-composer install
-```
-
-Create environment file
-
-```bash
-cp .env.example .env
-```
-
-Generate application key
-
-```bash
-php artisan key:generate
-```
-
-Configure your database in `.env`
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=the_over_charms
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
-Run migrations
-
-```bash
-php artisan migrate
-```
-
-Start Laravel server
-
-```bash
-php artisan serve
-```
-
----
-
-# ⚙ Environment Variables
-
-## Frontend
-
-```env
-VITE_API_URL=http://127.0.0.1:8000/api
-```
-
-## Backend
-
-```env
-APP_NAME="The Over Charms by Michie"
-APP_ENV=local
-APP_DEBUG=true
-APP_URL=http://127.0.0.1:8000
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=the_over_charms
-DB_USERNAME=root
-DB_PASSWORD=
-```
-
----
-
-# 📦 API
-
-Base URL
-
-```
-http://127.0.0.1:8000/api
-```
-
-Example
-
-```
-GET /products
-GET /categories
-GET /promotions
-
-POST /contact
-POST /orders
-```
-
----
-
 # 🎨 Design
 
 The website follows a modern artisan bakery theme featuring:
@@ -213,39 +104,12 @@ The website follows a modern artisan bakery theme featuring:
 
 ---
 
-# 📅 Roadmap
-
-- [x] Project Setup
-- [ ] Homepage
-- [ ] Product Catalog
-- [ ] Product Details
-- [ ] Search Products
-- [ ] Categories
-- [ ] Promotions
-- [ ] Gallery
-- [ ] Contact Page
-- [ ] Authentication
-- [ ] Shopping Cart
-- [ ] Checkout
-- [ ] Order History
-- [ ] Admin Dashboard
-- [ ] Inventory System
-- [ ] Sales Analytics
-
----
-
 # 🧪 Testing
 
 Frontend
 
 ```bash
 npm run test
-```
-
-Backend
-
-```bash
-php artisan test
 ```
 
 ---
@@ -258,35 +122,6 @@ Frontend
 - TypeScript
 - ESLint
 - Prettier
-
-Backend
-
-- PSR-12
-- Laravel Pint
-- RESTful API
-- Resource Controllers
-- Form Requests
-
----
-
-# 🌿 Git Workflow
-
-```
-main
-develop
-feature/*
-hotfix/*
-release/*
-```
-
-Example
-
-```
-feature/homepage
-feature/product-page
-feature/authentication
-feature/cart
-```
 
 ---
 
