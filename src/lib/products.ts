@@ -140,7 +140,7 @@ export const products: Product[] = [
       "Creamy burnt Basque-style cheesecake topped with a generous swirl of Nutella.",
     longDescription:
       "Our signature crustless burnt Basque cheesecake with its caramelized top and creamy, custardy center, finished with a thick swirl of Nutella hazelnut spread. Rich, indulgent, and impossible to resist.",
-    price: 350,
+    price: 250,
     image: NutellaBurntCheeseCake,
     category: "Cheesecakes",
     bestSeller: true,
