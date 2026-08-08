@@ -1,41 +1,35 @@
-import CartView from "@/pages/CartView.vue";
-import CheckoutView from "@/pages/CheckoutView.vue";
-import HomePage from "@/pages/HomeView.vue";
-import MenuView from "@/pages/MenuView.vue";
-import OrderView from "@/pages/OrderView.vue";
-import ProductView from "@/pages/ProductView.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomePage,
+    component: () => import("@/pages/HomeView.vue"),
   },
   {
     path: "/menu",
     name: "menu",
-    component: MenuView,
+    component: () => import("@/pages/MenuView.vue"),
   },
   {
     path: "/cart",
     name: "cart",
-    component: CartView,
-  },
-  {
-    path: "/order",
-    name: "order",
-    component: OrderView,
+    component: () => import("@/pages/CartView.vue"),
   },
   {
     path: "/checkout",
     name: "checkout",
-    component: CheckoutView,
+    component: () => import("@/pages/CheckoutView.vue"),
   },
   {
     path: "/product/:id",
     name: "product",
-    component: ProductView,
+    component: () => import("@/pages/ProductView.vue"),
+  },
+  {
+    path: "/order/:id",
+    name: "order",
+    component: () => import("@/pages/OrderView.vue"),
   },
 ];
 

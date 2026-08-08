@@ -91,7 +91,7 @@
       </div>
       <router-link
         to="/checkout"
-        class="mt-4 block text-center bg-primary text-primary-foreground rounded-full py-4 font-semibold hover:brightness-110 transition-all"
+        class="mt-4 block text-center bg-primary text-primary-foreground rounded-xl py-4 font-semibold hover:brightness-110 transition-all"
       >
         Checkout
       </router-link>
