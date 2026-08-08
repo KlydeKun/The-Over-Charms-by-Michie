@@ -31,9 +31,9 @@
           </h2>
           <FormField v-slot="{ componentField }" name="name">
             <FormItem>
-              <FormLabel for="name">Full Name</FormLabel>
+              <FormLabel>Full Name</FormLabel>
               <FormControl>
-                <Input id="name" type="text" v-bind="componentField" :class="[inputCls]" />
+                <Input type="text" aria-label="Name" v-bind="componentField" :class="[inputCls]" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -41,9 +41,9 @@
           <div class="flex flex-col sm:grid sm:grid-cols-2 gap-4 items-start">
             <FormField v-slot="{ componentField }" name="phone">
               <FormItem>
-                <FormLabel for="phone">Phone Number</FormLabel>
+                <FormLabel>Phone Number</FormLabel>
                 <FormControl>
-                  <Input id="phone" type="text" v-bind="componentField" :class="[inputCls]" />
+                  <Input type="text" aria-label="Phone Number" v-bind="componentField" :class="[inputCls]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -51,9 +51,9 @@
 
             <FormField v-slot="{ componentField }" name="email">
               <FormItem>
-                <FormLabel for="email">Email</FormLabel>
+                <FormLabel>Email</FormLabel>
                 <FormControl>
-                  <Input id="email" type="text" v-bind="componentField" :class="[inputCls]" />
+                  <Input type="text" aria-label="Email" v-bind="componentField" :class="[inputCls]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -62,9 +62,9 @@
           <div v-if="fulfillment === 'delivery'" class="space-y-4">
             <FormField v-slot="{ componentField }" name="address">
               <FormItem>
-                <FormLabel for="address">Delivery address</FormLabel>
+                <FormLabel>Delivery address</FormLabel>
                 <FormControl>
-                  <Input id="address" type="text" v-bind="componentField" :class="[inputCls]" />
+                  <Input type="text" aria-label="Delivery Address" v-bind="componentField" :class="[inputCls]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -114,8 +114,8 @@
             </FormField>
             <FormField v-slot="{ value, handleChange }" name="time">
               <FormItem>
-                <FormLabel>Preferred Time</FormLabel>
-                <Select :model-value="value ?? ''" @update:model-value="handleChange">
+                <FormLabel for="preferred_select">Preferred Time</FormLabel>
+                <Select id="preferred_select" :model-value="value ?? ''" @update:model-value="handleChange">
                   <FormControl>
                     <SelectTrigger class="w-full rounded-xl border-foreground/10 bg-card py-6">
                       <SelectValue placeholder="Select a time slot" />
