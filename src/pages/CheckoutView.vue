@@ -71,9 +71,9 @@
             </FormField>
             <FormField v-slot="{ componentField }" name="instructions">
               <FormItem>
-                <FormLabel for="instructions">Delivery instructions (optional)</FormLabel>
+                <FormLabel>Delivery instructions (optional)</FormLabel>
                 <FormControl>
-                  <Textarea id="instructions" v-bind="componentField" :class="[textAreaCls]" />
+                  <Textarea aria-label="Delivery Instruction" v-bind="componentField" :class="[textAreaCls]" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -114,8 +114,8 @@
             </FormField>
             <FormField v-slot="{ value, handleChange }" name="time">
               <FormItem>
-                <FormLabel for="preferred_select">Preferred Time</FormLabel>
-                <Select id="preferred_select" :model-value="value ?? ''" @update:model-value="handleChange">
+                <FormLabel>Preferred Time</FormLabel>
+                <Select aria-label="Preffered Time" :model-value="value ?? ''" @update:model-value="handleChange">
                   <FormControl>
                     <SelectTrigger class="w-full rounded-xl border-foreground/10 bg-card py-6">
                       <SelectValue placeholder="Select a time slot" />
