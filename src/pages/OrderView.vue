@@ -15,8 +15,8 @@
       </p>
     </div>
 
-    <div className="bg-card border border-foreground/5 rounded-2xl p-6 mb-6">
-      <div className="grid grid-cols-2 gap-4 text-sm">
+    <div class="bg-card border border-foreground/5 rounded-2xl p-6 mb-6">
+      <div class="grid grid-cols-2 gap-4 text-sm">
         <Info label="Order" :value="getOrders?.id" />
         <Info label="Status" value="Confirmed" />
         <Info :label="getOrders?.customer.fulfillment === 'delivery' ? 'Delivery Date' : 'Pickup Date'"
@@ -27,30 +27,30 @@
       </div>
     </div>
 
-    <div className="bg-card border border-foreground/5 rounded-2xl p-6 mb-6">
-      <h3 className="text-xs font-semibold uppercase tracking-widest mb-4">Order status</h3>
-      <ol className="space-y-3">
-        <li className="flex items-center gap-3 text-sm" v-for="item in status" :key="item.label">
+    <div class="bg-card border border-foreground/5 rounded-2xl p-6 mb-6">
+      <h3 class="text-xs font-semibold uppercase tracking-widest mb-4">Order status</h3>
+      <ol class="space-y-3">
+        <li class="flex items-center gap-3 text-sm" v-for="item in status" :key="item.label">
           <span :class="['size-3 rounded-full', item.active ? 'bg-primary' : 'bg-foreground/10']" />
           <span :class="[item.active ? '' : 'text-muted-foreground']">{{ item.label }}</span>
         </li>
       </ol>
     </div>
 
-    <div className="bg-card border border-foreground/5 rounded-2xl p-6 mb-8">
-      <h3 className="text-xs font-semibold uppercase tracking-widest mb-4">What's in the box</h3>
-      <ul className="space-y-3 mb-4">
-        <li v-for="order in getOrders?.items" :key="order.id" className="flex justify-between gap-3 text-sm">
-          <span className="min-w-0">
-            <span className="font-mono text-xs text-muted-foreground mr-2">×{{ order.quantity }}</span>
+    <div class="bg-card border border-foreground/5 rounded-2xl p-6 mb-8">
+      <h3 class="text-xs font-semibold uppercase tracking-widest mb-4">What's in the box</h3>
+      <ul class="space-y-3 mb-4">
+        <li v-for="order in getOrders?.items" :key="order.id" class="flex justify-between gap-3 text-sm">
+          <span class="min-w-0">
+            <span class="font-mono text-xs text-muted-foreground mr-2">×{{ order.quantity }}</span>
             {{ order.name }}
           </span>
-          <span className="font-mono text-xs shrink-0">
+          <span class="font-mono text-xs shrink-0">
             {{ formatPrice(order.price * order.quantity) }}
           </span>
         </li>
       </ul>
-      <div className="pt-3 border-t border-foreground/10 space-y-1.5 text-sm">
+      <div class="pt-3 border-t border-foreground/10 space-y-1.5 text-sm">
         <Row label="Subtotal" :value='formatPrice(getOrders?.subtotal ?? 0)' />
         <Row label="Delivery" :value="getOrders?.delivery === 0 ? 'Free' : formatPrice(getOrders?.delivery ?? 0)" />
         <Row :label='`Paid via ${getOrders?.customer.payment.toUpperCase()}`'
