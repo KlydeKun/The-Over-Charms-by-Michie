@@ -53,7 +53,7 @@
       <div class="pt-3 border-t border-foreground/10 space-y-1.5 text-sm">
         <Row label="Subtotal" :value='formatPrice(getOrders?.subtotal ?? 0)' />
         <Row label="Delivery" :value="getOrders?.delivery === 0 ? 'Free' : formatPrice(getOrders?.delivery ?? 0)" />
-        <Row :label='`Paid via ${getOrders?.customer.payment.toUpperCase()}`'
+        <Row :label="`Paid via ${getOrders?.customer.payment.toUpperCase() ?? ''}`"
           :value="formatPrice(getOrders?.total ?? 0)" bold />
       </div>
     </div>
