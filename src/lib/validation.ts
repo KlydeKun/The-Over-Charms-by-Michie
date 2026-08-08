@@ -30,5 +30,5 @@ export const checkoutSchema = z.object({
       { message: "Date cannot be before today" }
     ),
   time: z.string({ message: "Time is required" }).min(1),
-  payment: z.enum(["cod", "card", "gcash", "maya"]),
+  payment: z.enum(["cod", "gcash", "maya"]),
 });
