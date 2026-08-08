@@ -23,11 +23,6 @@ const routes = [
     component: CartView,
   },
   {
-    path: "/order",
-    name: "order",
-    component: OrderView,
-  },
-  {
     path: "/checkout",
     name: "checkout",
     component: CheckoutView,
@@ -36,6 +31,11 @@ const routes = [
     path: "/product/:id",
     name: "product",
     component: ProductView,
+  },
+  {
+    path: "/order/:id",
+    name: "order",
+    component: OrderView,
   },
 ];
 
