@@ -122,7 +122,6 @@ watch(
     if (newValue) {
       try {
         const raw = sessionStorage.getItem(`order:${newValue}`);
-        console.log("raw:", raw)
         if (raw) getOrders.value = JSON.parse(raw);
       } catch (e) {
         console.error("Failed to parse storage:", e);
@@ -135,8 +134,12 @@ watch(
   },
 );
 
+const defaultTitle = "Order - The Oven Charms by Michie";
+
 useHead({
-  title: `Order ${getOrders.value?.id} - The Oven Charms by Michie`,
+  title: getOrders.value
+    ? `Order ${getOrders.value.id} - The Oven Charms by Michie`
+    : defaultTitle,
   meta: [
     {
       name: "description",
