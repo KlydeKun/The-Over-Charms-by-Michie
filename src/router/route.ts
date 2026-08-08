@@ -29,7 +29,7 @@ const routes = [
   {
     path: "/order/:id",
     name: "order",
-    component: OrderView,
+    component: () => import("@/pages/OrderView.vue"),
   },
 ];
 
